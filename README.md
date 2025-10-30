@@ -98,3 +98,6 @@ Crédits
 
 Projet personnalisé inspiré d’outils d’administration système et d’environnements techniques.
 Créé pour un usage personnel d’optimisation et de maintenance Windows.
+
+[url] https://i.pinimg.com/736x/68/fe/35/68fe359d4c9b42b13e721b1423454bf4.jpg [/url]
+
