@@ -2,10 +2,7 @@
 :: =========================================================
 :: FBS-Terminal - Version corrigée sans horloge
 :: =========================================================
-
 setlocal enabledelayedexpansion
-
-:: ---------- CONFIG ----------
 set "AUTH_PASSWORD=fsb2025"
 set "LOGFILE=%~dp0FBS-Terminal-Log.txt"
 set "WINDOW_TITLE=FBS-Console"
@@ -13,16 +10,12 @@ set "NET_IFACE=Ethernet"
 mode con: cols=100 lines=38
 title %WINDOW_TITLE%
 color 0B
-
-:: ---------- ELEVATION ----------
 net session >nul 2>&1
 if %errorlevel% neq 0 (
     echo [!] Relancement en mode administrateur requis...
     powershell -Command "Start-Process -FilePath '%~f0' -Verb RunAs"
     exit /b
 )
-
-:: ---------- AUTHENTIFICATION ----------
 cls
 echo =============================================================
 echo              FBS-Console - Acces securise
@@ -88,8 +81,6 @@ if "%choix%"=="14" goto CREATE_RP
 if "%choix%"=="15" goto SHOWLOG
 if "%choix%"=="0" goto QUIT
 goto MENU
-
-:: ---------- OPTIONS ----------
 :SYSINFO
 cls
 systeminfo | findstr /B /C:"Nom de l'hote" /C:"OS Name" /C:"Version" /C:"Type du systeme"
@@ -220,3 +211,4 @@ cls
 echo Fermeture...
 timeout /t 1 >nul
 exit /b
+
