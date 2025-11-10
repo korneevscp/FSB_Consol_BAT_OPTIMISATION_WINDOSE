@@ -1,7 +1,4 @@
 @echo off
-:: =========================================================
-:: FBS-Terminal - Version corrigée sans horloge
-:: =========================================================
 setlocal enabledelayedexpansion
 set "AUTH_PASSWORD=fsb2025"
 set "LOGFILE=%~dp0FBS-Terminal-Log.txt"
@@ -211,4 +208,5 @@ cls
 echo Fermeture...
 timeout /t 1 >nul
 exit /b
+
 
